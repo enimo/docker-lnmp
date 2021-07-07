@@ -1,0 +1,6 @@
+*
+!demo
+!demo/index.php
+!demo/phpmyadmin
+!demo/phpredis
+!.gitignore

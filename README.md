@@ -15,11 +15,11 @@ $ git clone https://github.com/enimo/docker-lnmp.git
 ### 第三步，运行容器编排
 
 ```
-$ cd Docker-LNMP   // 进入项目根目录
+$ cd docker-lnmp   // 进入项目根目录
 $ docker-compose up -d   // 容器编排命令
 ```
-
-启用服务，第一次需要构建镜像
+启用服务，第一次需要构建镜像，有一定耗时。
+P.S.: 或者在远程镜像仓库（腾讯云/阿里云）拉取已经构建完成的镜像: nginx, php73, redis, mysql, portainer(5个即可)
 
 
 ### 第四步，测试服务访问
@@ -30,9 +30,9 @@ https://127.0.0.1/  （由于证书不安全，所以需要点击继续访问）
 
 http://127.0.0.1:9001 （访问 Docker GUI 管理工具 Portainer）
 
-http://127.0.0.1/phpmyadmin/（访问 phpmyadmin 管理工具）
+http://127.0.0.1/phpmyadmin/（访问 phpmyadmin 管理工具，需提前解压www/目标下的phpmyadmin.zip包）
 
-http://127.0.0.1/phpredis （访问 phpredis 管理工具）
+http://127.0.0.1/phpredis （访问 phpredis 管理工具，需提前解压www/目标下的phpredis.zip包）
 
 ### `CLI` 运行模式（内置服务）
 

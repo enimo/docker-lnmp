@@ -1,6 +1,6 @@
 *
 !demo
 !demo/index.php
-!demo/phpmyadmin
-!demo/phpredis
+!demo/phpmyadmin.zip
+!demo/phpredis.zip
 !.gitignore

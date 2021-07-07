@@ -30,7 +30,7 @@ https://127.0.0.1/  （由于证书不安全，所以需要点击继续访问）
 
 http://127.0.0.1:9001 （访问 Docker GUI 管理工具 Portainer）
 
-http://127.0.0.1/phpmyadmin/（访问 phpmyadmin 管理工具，需提前解压www/目标下的phpmyadmin.zip包）
+http://127.0.0.1/phpmyadmin/ （访问 phpmyadmin 管理工具，需提前解压www/目标下的phpmyadmin.zip包）
 
 http://127.0.0.1/phpredis （访问 phpredis 管理工具，需提前解压www/目标下的phpredis.zip包）
 

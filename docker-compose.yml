@@ -49,6 +49,7 @@ services:
       - ./conf/php/php73.ini:/usr/local/etc/php/php.ini:ro,cached
       - ./conf/php/php-fpm.d/www73.conf:/usr/local/etc/php-fpm.d/www.conf:rw,cached
       - ./log/php-fpm/:/var/log/php-fpm/:rw,cached
+      - ./conf/certs/:/var/certs/:ro,cached
     links:
       - mysql:mysql
       - redis:redis

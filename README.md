@@ -34,6 +34,9 @@ http://127.0.0.1/phpmyadmin/ （访问 phpmyadmin 管理工具，需提前解压
 
 http://127.0.0.1/phpredis （访问 phpredis 管理工具，需提前解压www/目标下的phpredis.zip包）
 
+http://127.0.0.1:8081  （访问 [Laravel](https://github.com/enimo/laravel8) 服务，如果有需要可单独安装）
+
+
 ### `CLI` 运行模式（内置服务）
 
 - 首先，自定义构建 `PHP-CLI` 镜像，安装 `Git`，`Composer`，`Swoole` 等扩展和工具

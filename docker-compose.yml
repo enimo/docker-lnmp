@@ -1,4 +1,4 @@
-version: '5001'
+version: '2.6'
 
 services:
 
@@ -54,7 +54,7 @@ services:
       - ./conf/certs/:/var/certs/:ro,cached
     links:
       - mysql:mysql
-      - redis:redis
+      # - redis:redis
     networks:
       docker_net:
         ipv4_address: ${PHP73_IP}

@@ -6,10 +6,10 @@ services:
     # image: nginx:alpine
     image: ccr.ccs.tencentyun.com/tcb-87669051-ffhh/nginx:v20210707
     ports:
-      - "80:80"
-      - "443:443"
+      # - "80:80"
+      # - "443:443"
       - "9002:9002"
-      # - "8081:8081"
+      - "9003:9003"
     volumes:
       - ${WORKSPACES}:/var/www/html/:rw,cached
       - ./conf/nginx/conf.d:/etc/nginx/conf.d/:ro,cached
@@ -85,7 +85,7 @@ services:
       - ./mysql/:/var/lib/mysql/:rw,cached
       - ./log/mysql/:/var/log/mysql/:rw,cached
     environment:
-      MYSQL_ROOT_PASSWORD: "123456"
+      MYSQL_ROOT_PASSWORD: "root123456"
     networks:
       docker_net:
         ipv4_address: ${MYSQL_IP}
@@ -109,14 +109,14 @@ services:
   #     docker_net:
   #       ipv4_address: ${MYSQL8_IP}
 
-  redis:
-    # image: redis:latest
-    image: ccr.ccs.tencentyun.com/tcb-87669051-ffhh/redis:v0707
-    ports:
-      - "6379:6379"
-    networks:
-      docker_net:
-        ipv4_address: ${REDIS_IP}
+  # redis:
+  #   # image: redis:latest
+  #   image: ccr.ccs.tencentyun.com/tcb-87669051-ffhh/redis:v0707
+  #   ports:
+  #     - "6379:6379"
+  #   networks:
+  #     docker_net:
+  #       ipv4_address: ${REDIS_IP}
 
   portainer:
     # image: portainer/portainer:latest

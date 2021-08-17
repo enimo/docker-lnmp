@@ -36,6 +36,7 @@ http://127.0.0.1:9002/phpredis （访问 phpredis 管理工具，需提前解压
 
 http://127.0.0.1:9003/  （访问 [Laravel](https://github.com/enimo/laravel8) 服务，有需要可单独安装，依赖项：`配置.env/certs, 初始化数据库`）
 
+http://127.0.0.1:9005 （访问 CMS 生成和管理工具 [Strapi](https://github.com/strapi/strapi)，可自动生成CMS相关API；首次启动较慢，需安装依赖）
 
 ### `CLI` 运行模式（内置服务）
 

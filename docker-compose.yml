@@ -108,6 +108,28 @@ services:
         ipv4_address: ${PORTAINER_IP}
 
 
+  strapi:
+    container_name: strapi3.6.5
+    # image: strapi/strapi
+    image: ccr.ccs.tencentyun.com/tcb-saas/strapi:v20210817
+    environment:
+      - DATABASE_CLIENT=mysql
+      - DATABASE_HOST=mysql8
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=db
+      - DATABASE_USERNAME=user
+      - DATABASE_PASSWORD=pass
+    ports:
+      - 9005:1337
+    volumes:
+      # - ./app:/srv/app
+      - ./strapi-app:/srv/app:rw,cached
+    depends_on:
+      - mysql8
+    networks:
+      docker_net:
+        ipv4_address: ${STRAPI_IP}
+
 
 networks:
   docker_net:

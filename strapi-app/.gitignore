@@ -1,2 +1,2 @@
-*
-!.gitignore
+strapi/
+docker-entrypoint.sh

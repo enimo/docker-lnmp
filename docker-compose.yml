@@ -111,8 +111,8 @@ services:
   strapi:
     container_name: strapi3.6
     # image: strapi/strapi
-    # build: ./strapi-app/
-    image: ccr.ccs.tencentyun.com/tcb-saas/strapi:v20210818
+    build: ./strapi-app/
+    # image: ccr.ccs.tencentyun.com/tcb-saas/strapi:v20210818
     # environment:
     #   - DATABASE_CLIENT=mysql
     #   - DATABASE_HOST=mysql8

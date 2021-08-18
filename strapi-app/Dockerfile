@@ -26,8 +26,13 @@ VOLUME /srv/app/config
 # COPY docker-entrypoint.sh /usr/local/bin/
 # ENTRYPOINT ["docker-entrypoint.sh"]
 
-CMD ["strapi", "develop"]
-# CMD ["strapi", "start"]
+
+# CMD ["strapi", "develop"]
+
+
+RUN yarn build
+
+CMD ["yarn", "start"]
 
 
 

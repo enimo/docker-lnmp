@@ -112,7 +112,13 @@ services:
     container_name: strapi3.6
     # image: strapi/strapi
     # build: ./strapi-app/
-    image: ccr.ccs.tencentyun.com/tcb-saas/strapi:v20210819
+
+    # develop版本，每次启动时需要webpack编译一次
+    image: ccr.ccs.tencentyun.com/tcb-saas/strapi:v20210818 
+
+    # product版本，已完成编译build，直接启动
+    # image: ccr.ccs.tencentyun.com/tcb-saas/strapi:v20210819
+
     # environment:
     #   - DATABASE_CLIENT=mysql
     #   - DATABASE_HOST=mysql8

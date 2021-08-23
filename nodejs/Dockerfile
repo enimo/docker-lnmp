@@ -28,12 +28,14 @@ RUN apk add --no-cache --virtual .build-deps-yarn curl \
 
 RUN mkdir /srv/app && chown 1000:1000 -R /srv/app
 
-# WORKDIR /srv/app
+WORKDIR /srv/app
 # COPY ./strapi/package.json ./
 # COPY ./strapi/yarn.lock ./
 
 VOLUME /srv/app
 
+
+RUN npm install --global http-server
 
 # RUN npm install
 
@@ -46,9 +48,9 @@ VOLUME /srv/app
 # EXPOSE 1337
 
 
-COPY docker-entrypoint.sh /usr/local/bin/
-ENTRYPOINT ["docker-entrypoint.sh"]
+# COPY docker-entrypoint.sh /usr/local/bin/
+# ENTRYPOINT ["docker-entrypoint.sh"]
 
 # CMD ["npm", "start"]
-# CMD ["top", " "]
+CMD ["http-server", "./ --port 9101"]
 

@@ -2,7 +2,7 @@
 set -ea
 
 
-if [ "$1" = "npm-test" ]; then
+if [ "$1" = "npm" ]; then
 
   # if [ ! -f "package.json" ]; then
 

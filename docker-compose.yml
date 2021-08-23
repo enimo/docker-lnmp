@@ -140,26 +140,26 @@ services:
         ipv4_address: ${STRAPI_IP}
 
 
-  # nodejs:
-  #   container_name: nodejs14.17
-  #   # image: ccr.ccs.tencentyun.com/tcb-87669051-ffhh/nginx:v20210707
-  #   build: ./nodejs/
-  #   ports:
-  #     # - "80:80"
-  #     # - "443:443"
-  #     - "9101:9101"
-  #     - "9102:9102"
-  #   volumes:
-  #     - ./nodejs/app:/srv/app:rw,cached
-  #     - ./conf/nodejs:/etc/nodejs:ro,cached
-  #     - ./log/nodejs/:/var/log/nodejs/:rw,cached
-  #   links:
-  #     - nginx:nginx
-  #   environment:
-  #     - TZ=Asia/Shanghai
-  #   networks:
-  #     docker_net:
-  #       ipv4_address: ${NODEJS_IP}
+  nodejs:
+    container_name: nodejs14.17
+    # image: ccr.ccs.tencentyun.com/tcb-87669051-ffhh/nginx:v20210707
+    build: ./nodejs/
+    ports:
+      # - "80:80"
+      # - "443:443"
+      - "9101:9101"
+      - "9102:9102"
+    volumes:
+      - ./nodejs/app:/srv/app:rw,cached
+      - ./conf/nodejs:/etc/nodejs:ro,cached
+      - ./log/nodejs/:/var/log/nodejs/:rw,cached
+    links:
+      - nginx:nginx
+    environment:
+      - TZ=Asia/Shanghai
+    networks:
+      docker_net:
+        ipv4_address: ${NODEJS_IP}
 
 
 networks:

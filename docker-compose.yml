@@ -141,7 +141,7 @@ services:
 
 
   nodejs:
-    container_name: nodejs16
+    container_name: nodejs14.17
     # image: ccr.ccs.tencentyun.com/tcb-87669051-ffhh/nginx:v20210707
     build: ./nodejs/
     ports:
@@ -154,7 +154,7 @@ services:
       - ./conf/nodejs:/etc/nodejs:ro,cached
       - ./log/nodejs/:/var/log/nodejs/:rw,cached
     links:
-      - php73:php73
+      - nginx:nginx
     environment:
       - TZ=Asia/Shanghai
     networks:

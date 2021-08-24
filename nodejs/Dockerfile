@@ -52,5 +52,5 @@ RUN npm install --global http-server
 # ENTRYPOINT ["docker-entrypoint.sh"]
 
 # CMD ["npm", "start"]
-CMD ["http-server", "./ --port 9101"]
+CMD ["http-server", "-p 9101", "./", "--cors"]
 

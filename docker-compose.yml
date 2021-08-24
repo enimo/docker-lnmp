@@ -142,13 +142,11 @@ services:
 
   nodejs:
     container_name: nodejs14.17
-    # image: ccr.ccs.tencentyun.com/tcb-87669051-ffhh/nginx:v20210707
-    build: ./nodejs/
+    image: ccr.ccs.tencentyun.com/tcb-saas/nodejs:v20210824
+    # build: ./nodejs/
     ports:
-      # - "80:80"
-      # - "443:443"
       - "9101:9101"
-      - "9102:9102"
+      # - "9102:9102" #建议一个nodejs service容器只运行一个node app应用
     volumes:
       - ./nodejs/app:/srv/app:rw,cached
       - ./conf/nodejs:/etc/nodejs:ro,cached

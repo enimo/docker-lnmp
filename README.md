@@ -38,6 +38,9 @@ http://127.0.0.1:9003/  （访问 [Laravel](https://github.com/enimo/laravel8) �
 
 http://127.0.0.1:9005/ （CMS生成和管理工具 [Strapi](https://github.com/strapi/strapi)，可自动生成CMS及API）
 
+http://127.0.0.1:9101/ （nodejs服务，默认会启动一个`http-server`服务，映射目录至`./nodejs/app`，可在Dockerfile修改对应node服务）
+
+
 ### `CLI` 运行模式（内置服务）
 
 - 首先，自定义构建 `PHP-CLI` 镜像，安装 `Git`，`Composer`，`Swoole` 等扩展和工具

@@ -159,6 +159,16 @@ services:
       docker_net:
         ipv4_address: ${NODEJS_IP}
 
+  # homeassistant:
+  #   container_name: homeassistant
+  #   image: home-assistant
+  #   volumes:
+  #     - ./conf/homeassistant:/config
+  #     - /etc/localtime:/etc/localtime:ro
+  #   restart: unless-stopped
+  #   privileged: true
+    # network_mode: host
+
 
 networks:
   docker_net:
